@@ -1,0 +1,98 @@
+[
+  {
+    "name":"Nintendo Nes",
+    "support":"console",
+    "image": "assets/images/nes.png",
+    "price":"89.99",
+    "id":"J01",
+    "quantity":"1"
+  },
+  {
+    "name":"Master System",
+    "support":"console",
+    "image": "assets/images/sms.jpg",
+    "price":"79.99",
+    "id":"J02",
+    "quantity":"1"
+  },
+  {
+    "name":"Nec PC Engine",
+    "support":"console",
+    "image": "assets/images/nec.jpg",
+    "price":"199.99",
+    "id":"J03",
+    "quantity":"1"
+  },
+  {
+    "name":"Atari 7800",
+    "support":"console",
+    "image": "assets/images/atari.jpg",
+    "price":"59.99",
+    "id":"J04",
+    "quantity":"1"
+  },
+  {
+    "name":"Amstrad GX4000",
+    "support":"console",
+    "image": "assets/images/amstrad.jpg",
+    "price":"49.99",
+    "id":"J05",
+    "quantity":"1"
+  },
+  {
+    "name":"Sega SG-1000",
+    "support":"console",
+    "image": "assets/images/sg1000.jpg",
+    "price":"89.99",
+    "id":"J06",
+    "quantity":"1"
+  },
+  {
+      "name":"Pad Nintendo Nes",
+      "support":"manette",
+      "image": "assets/images/mnes.jpg",
+      "price":"19.99",
+      "id":"M01",
+      "quantity":"1"
+  },
+  {
+      "name":"Pad Master System",
+      "support":"manette",
+      "image": "assets/images/msms.jpeg",
+      "price":"19.99",
+      "id":"M02",
+      "quantity":"1"
+  },
+  {
+      "name":"Pad Nec PC Engine",
+      "support":"manette",
+      "image": "assets/images/mnec.jpg",
+      "price":"29.99",
+      "id":"M03",
+      "quantity":"1"
+  },
+  {
+      "name":"Pad Atari 7800",
+      "support":"manette",
+      "image": "assets/images/matari.jpg",
+      "price":"19.99",
+      "id":"M04",
+      "quantity":"1"
+  },
+  {
+      "name":"Pad Amstrad GX4000",
+      "support":"manette",
+      "image": "assets/images/mamstrad.jpg",
+      "price":"29.99",
+      "id":"M05",
+      "quantity":"1"
+  },
+  {
+      "name":"Pad Sega SG-1000",
+      "support":"manette",
+      "image": "assets/images/msg1000.jpg",
+      "price":"39.99",
+      "id":"M06",
+      "quantity":"1"
+  }
+]

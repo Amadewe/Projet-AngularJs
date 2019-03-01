@@ -1,0 +1,18 @@
+<section class="cardDisplayCase">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div>
+        <div class="card case" style="width:17rem;" ng-repeat="product in products">
+          <img class="card-img-topCase" src="{{product.image}}"/>
+          <div class="card-body">
+            <div class="card-title">{{product.name}}</div>
+            <p>{{product.price}}</p>
+            <a type="button" ng-click="buy($index)" class="btn btn-primary" >Ajouter au panier</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
