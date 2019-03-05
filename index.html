@@ -12,8 +12,8 @@
   <script src="https://code.angularjs.org/1.7.7/angular-route.min.js"></script>
   <script src="assets/js/script.js"></script>
 </head>
-<body ng-app="appEcommerce" ng-controller="homeCtrl">
-
+<body ng-app="retroPlay" ng-controller="homeCtrl">
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light colorNav">
     <a class="navbar-brand" href="#"><img src="assets/images/logo.png"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,17 +25,16 @@
           <a class="nav-link" href="#!/products">Produits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#!/console">Consoles</a>
+          <a class="nav-link" href="#!/consoles">consoles</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#!/manette">Manettes</a>
+          <a class="nav-link" href="#!/pad">Manettes</a>
         </li>
         <li class="nav-item">
           <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><img src="assets/images/panier.png" /></button>
-
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-xl" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">Votre panier : </h5>
@@ -43,9 +42,8 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-
-                <!-- TOUTE MODIF -->
-                <table>
+                <!-- Panier dans la modal-->
+                <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black">
                   <thead>
                     <tr>
                       <th>Article</th>
@@ -56,33 +54,28 @@
                       <th>Supprimer</th>
                     </tr>
                   </thead>
-                <tbody>
-                  <!-- <tbody ng-init="quantity=1;total=0"> -->
-                    <tr ng-repeat="test in array">
-                      <td>{{test.name}}</td>
-                      <td >{{test.price | number : 2}}</td>
+                  <tbody>
+                    <tr ng-repeat="reference in basket">
+                      <td>{{reference.name}}</td>
+                      <td >{{reference.price | number : 2}}</td>
                       <td>
-                        <button ng-click="decreaseQuantity($index)">-</button>{{test.quantity}}
+                        <button ng-click="decreaseQuantity($index)">-</button>{{reference.quantity}}
                         <button ng-click="addQuantity($index)">+</button>
                       </td>
-                      <td>{{test.support}}</td>
-                    <!-- permet d'afficher et d'additionner mes produits à l'ajout du panier mais ne se modifie pas avec quantité -->
-                      <td ng-init="$parent.totals=$parent.totals+(test.quantity * test.price)">{{test.quantity * test.price | number : 2}}</td>
-                      <!-- <td>{{test.quantity * test.price | number : 2}}</td> -->
+                      <td>{{reference.support}}</td>
+                      <!-- êparent.totals permet d'afficher et d'additionner mes produits à l'ajout du panier mais ne se modifie pas avec quantité -->
+                      <td ng-init="$parent.totals=$parent.totals+(reference.quantity * reference.price)">{{reference.quantity * reference.price | number : 2}}</td>
                       <td><button type="button" ng-click="remove($index)">X</button></td>
                     </tr>
                     <tr>
                       <td>Total</td>
-                      <td></td>
-                    <td>{{totals | number:2}}</td>
+                      <td>{{totals | number:2}}</td>
                     </tr>
                   </tbody>
                 </table>
-
-
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">fermer</button>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -90,7 +83,7 @@
       </ul>
     </div>
   </nav>
-<h1 class="titleDusty">Dusty Players</h1>
+  <h1 class="titleDusty">Dusty Players</h1>
   <div ng-view></div>
 
   <!-- Footer -->
@@ -153,8 +146,8 @@
             </div>
           </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
-</body>
-</html>
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+        </body>
+        </html>
